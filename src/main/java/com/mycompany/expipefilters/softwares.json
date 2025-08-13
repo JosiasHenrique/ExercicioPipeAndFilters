@@ -1,0 +1,12 @@
+[
+  { "nome": "VS Code", "tipo": "IDE", "so": "Windows", "preco": 0 },
+  { "nome": "IntelliJ IDEA", "tipo": "IDE", "so": "Windows", "preco": 149 },
+  { "nome": "Photoshop", "tipo": "Design", "so": "Windows", "preco": 100 },
+  { "nome": "GIMP", "tipo": "Design", "so": "Linux", "preco": 0 },
+  { "nome": "Notion", "tipo": "Produtividade", "so": "Windows", "preco": 0 },
+  { "nome": "Trello", "tipo": "Produtividade", "so": "Windows", "preco": 0 },
+  { "nome": "Linux Terminal", "tipo": "Ferramenta", "so": "Linux", "preco": 0 },
+  { "nome": "Docker", "tipo": "Ferramenta", "so": "Windows", "preco": 0 },
+  { "nome": "Sublime Text", "tipo": "IDE", "so": "Windows", "preco": 80 },
+  { "nome": "Figma", "tipo": "Design", "so": "Windows", "preco": 0 }
+]
