@@ -8,5 +8,5 @@ import java.util.List;
  */
 public interface Processor {
     
-    abstract List<String> execute();
+    abstract List<Software> execute();
 }
