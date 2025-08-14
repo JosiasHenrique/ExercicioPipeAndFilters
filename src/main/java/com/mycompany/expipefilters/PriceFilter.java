@@ -19,15 +19,14 @@ public class PriceFilter implements Processor {
     @Override
     public List<Software> execute(List<Software> softwares) {
         System.out.println("Filtrando por preço de: " + priceMin + " até " + priceMax + "\n");
-        List<Software> newList = new ArrayList<>();
 
-        for (Software x : softwares) {
-            if (x.getPreco() >= priceMin && x.getPreco() <= priceMax) {
-                newList.add(x);
-            }
+        if (softwares == null) {
+            return List.of(); // lista imutável e vazia
         }
 
-        return newList;
+        return softwares.stream()
+                .filter(s -> s.getPreco() >= priceMin && s.getPreco() <= priceMax)
+                .toList();
     }
 
 }

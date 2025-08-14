@@ -16,15 +16,13 @@ public class ExPipeFilters {
         
         List<Software> softwares = loadSoftwaresFromJson("softwares.json");
         
-        CategoryFilter cf = new CategoryFilter("IDE");
-        PriceFilter pf = new PriceFilter(10, 500);
-        pf.execute(softwares);
-        
-        SortFilter sf = new SortFilter(SortType.ASCENDING);
-        
-        for(Software x : sf.execute(softwares)){
-            System.out.println(x.getNome());
-        }
+       Pipe pipe = new Pipe();
+       
+       pipe.addFilter(new CategoryFilter("IDE"));
+       
+       List<Software> filtrados = pipe.execute(softwares);
+       
+       filtrados.forEach(System.out::println);
 
     }
 

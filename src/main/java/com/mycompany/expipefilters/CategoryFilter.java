@@ -14,15 +14,14 @@ public class CategoryFilter implements Processor {
     @Override
     public List<Software> execute(List<Software> softwares) {
         System.out.println("Filtrando por categoria: " + category + "...\n");
-        List<Software> newList = new ArrayList<>();
 
-        for (Software x : softwares) {
-            if (x.getTipo().equalsIgnoreCase(category)) {
-                newList.add(x);
-            }
+        if (softwares == null) {
+            return List.of();
         }
 
-        return newList;
+        return softwares.stream()
+                .filter(s -> s.getTipo().equalsIgnoreCase(category))
+                .toList();
     }
 
 }
